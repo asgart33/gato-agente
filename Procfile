@@ -1,1 +1,1 @@
-worker: python -u main.py
+worker: python src/main.py
