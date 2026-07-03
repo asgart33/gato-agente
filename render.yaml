@@ -1,0 +1,14 @@
+services:
+  - type: worker
+    name: gato-agente
+    runtime: python
+    pythonVersion: 3.11
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -u main.py
+    envVars:
+      - key: EMAIL_PASSWORD
+        scope: build
+      - key: RECIPIENT_EMAIL
+        scope: build
+      - key: PLATFORM_URL
+        scope: build
